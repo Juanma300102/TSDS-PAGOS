@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "conceptos",
     "montosBase",
     "servicios",
+    "periodos",
 ]
 
 MIDDLEWARE = [
