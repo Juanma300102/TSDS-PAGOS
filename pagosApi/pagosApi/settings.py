@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "common",
     "conceptos",
     "montosBase",
+    "servicios",
 ]
 
 MIDDLEWARE = [
