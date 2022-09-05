@@ -1,3 +1,9 @@
 from django.contrib import admin
+from conceptos.models import Concepto
 
-# Register your models here.
+
+class ConceptoAdmin(admin.ModelAdmin):
+    ...
+
+
+admin.site.register(Concepto, ConceptoAdmin)
