@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "montosBase",
     "servicios",
     "periodos",
+    "mediosDePago",
 ]
 
 MIDDLEWARE = [
