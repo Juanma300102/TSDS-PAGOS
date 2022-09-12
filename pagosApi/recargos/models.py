@@ -1,4 +1,3 @@
-from turtle import title
 from common.models import models, AbstractBaseModel
 
 class Recargo(AbstractBaseModel):
