@@ -1,3 +1,9 @@
 from django.contrib import admin
+from pagosUnicos.models import PagoUnico
 
-# Register your models here.
+
+class PagoUnicoAdmin(admin.ModelAdmin):
+    ...
+
+
+admin.site.register(PagoUnico, PagoUnicoAdmin)
