@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "periodos",
     "mediosDePago",
     "recargos",
+    "bonificaciones",
 ]
 
 MIDDLEWARE = [
