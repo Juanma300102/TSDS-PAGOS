@@ -1,9 +1,9 @@
 from django.contrib import admin
-from suscripciones.models import suscripcion
+from suscripciones.models import Suscripcion
 
 
 class SuscripcionAdmin(admin.ModelAdmin):
     ...
 
 
-admin.site.register(suscripcion, SuscripcionAdmin)
+admin.site.register(Suscripcion, SuscripcionAdmin)

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "bonificaciones",
     "pagosUnicos",
     "suscripciones",
+    "deudas",
 ]
 
 MIDDLEWARE = [
