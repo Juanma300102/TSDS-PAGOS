@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "recargos",
     "bonificaciones",
     "pagosUnicos",
+    "suscripciones",
 ]
 
 MIDDLEWARE = [
