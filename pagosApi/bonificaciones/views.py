@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from bonificaciones.serializers import BonificacionesSerializer, Bonificacion
 
-# Create your views here.
+
+class BonificacionesViewSet(ModelViewSet):
+    queryset = Bonificacion.objects.all()
+    serializer_class = BonificacionesSerializer
