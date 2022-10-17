@@ -1,3 +1,4 @@
+from unittest.mock import patch
 from django.urls import include, path
 
 urlpatterns = [
@@ -6,4 +7,5 @@ urlpatterns = [
     path("", include(("periodos.url", "periodos"), "periodos")),
     path("", include(("servicios.urls", "servicios"), "servicios")),
     path("", include(("montosBase.urls", "montosBase"), "montosBase")),
+    patch("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
 ]
