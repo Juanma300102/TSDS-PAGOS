@@ -10,4 +10,5 @@ urlpatterns = [
     path("", include(("servicios.urls", "servicios"), "servicios")),
     path("", include(("montosBase.urls", "montosBase"), "montosBase")),
     patch("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
+    patch("", include(("pagosUnicos.urls", "pagosUnicos"), "pagosUnicos")),
 ]
