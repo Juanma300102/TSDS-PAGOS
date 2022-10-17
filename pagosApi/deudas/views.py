@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from deudas.serializers import DeudaSerializer, Deuda
 
-# Create your views here.
+
+class DeudaViewSet(ModelViewSet):
+    queryset = Deuda.objects.all()
+    serializer_class = DeudaSerializer
