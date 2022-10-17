@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from servicios.serializers import ServiciosSerializer, Servicio
 
-# Create your views here.
+
+class ServiciosViewSet(ModelViewSet):
+    queryset = Servicio.objects.all()
+    serializer_class = ServiciosSerializer
