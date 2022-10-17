@@ -9,6 +9,8 @@ urlpatterns = [
     path("", include(("periodos.urls", "periodos"), "periodos")),
     path("", include(("servicios.urls", "servicios"), "servicios")),
     path("", include(("montosBase.urls", "montosBase"), "montosBase")),
+    patch("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
+    patch("", include(("pagosUnicos.urls", "pagosUnicos"), "pagosUnicos")),
     path("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
     path("", include(("recargos.urls", "recargos"), "recargos")),
 ]

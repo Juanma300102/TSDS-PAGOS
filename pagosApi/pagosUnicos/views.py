@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from pagosUnicos.serializers import PagosUnicosSerializer, PagoUnico
 
-# Create your views here.
+
+class PagosUnicosViewSet(ModelViewSet):
+    queryset = PagoUnico.objects.all()
+    serializer_class = PagosUnicosSerializer
