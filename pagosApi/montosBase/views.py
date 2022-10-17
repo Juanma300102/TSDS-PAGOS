@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from montosBase.serializers import MontoBase, MontoBaseModelSerializer
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+
+class MontoBaseModelViewSet(ModelViewSet):
+    queryset = MontoBase.objects.all()
+    serializer_class = MontoBaseModelSerializer
