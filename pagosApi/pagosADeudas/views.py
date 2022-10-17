@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from pagosADeudas.serializers import PagosADeudasSerializer, PagoADeuda
 
-# Create your views here.
+
+class PagosADeudasViewSet(ModelViewSet):
+    queryset = PagoADeuda.objects.all()
+    serializer_class = PagosADeudasSerializer
