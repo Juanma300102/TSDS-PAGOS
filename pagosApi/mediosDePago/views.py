@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from mediosDePago.models import MedioDePago
-from mediosDePago.serialiserzs import MediosDePagoSerializer, MediosDePago
+from mediosDePago.serializers import MediosDePagoSerializer, MediosDePago
 
 
 class BonificacionesViewSet(ModelViewSet):
