@@ -9,6 +9,6 @@ urlpatterns = [
     path("", include(("periodos.url", "periodos"), "periodos")),
     path("", include(("servicios.urls", "servicios"), "servicios")),
     path("", include(("montosBase.urls", "montosBase"), "montosBase")),
-    patha("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
+    path("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
     path("", include(("recargos.urls", "recargos"), "recargos")),
 ]
