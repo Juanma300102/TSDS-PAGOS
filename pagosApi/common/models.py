@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class AbstractBaseModel(models.Model):
@@ -9,3 +10,7 @@ class AbstractBaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class User(AbstractUser):
+    uuid = models.UUIDField(null=True)

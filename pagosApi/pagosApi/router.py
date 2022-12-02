@@ -11,5 +11,4 @@ urlpatterns = [
     path("", include(("montosBase.urls", "montosBase"), "montosBase")),
     path("", include(("pagosADeudas.urls", "pagosADeudas"), "pagosADeudas")),
     path("", include(("recargos.urls", "recargos"), "recargos")),
-    path("", include(("auth.urls", "auth"), "auth")),
 ]

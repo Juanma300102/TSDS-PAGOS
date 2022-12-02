@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "keycloak",
     "drf_yasg",
     "common",
     "conceptos",
@@ -96,6 +97,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = "common.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -138,5 +140,31 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "keycloak.authentication.KeycloakJWTAuthentication",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 100,
+}
 
-REST_FRAMEWORK = {}
+"""
+========================================
+Keycloak app settings
+========================================
+"""
+KEYCLOAK_OAUTH_TRUSTED_ISSUERS = [
+    "http://localhost:8080/realms/pagos",
+]
+
+KEYCLOAK_DEFAULT_CLAIMS_MAP = {
+    "given_name": "first_name",
+    "family_name": "last_name",
+    "preferred_username": "username",
+    "email": "email",
+    "user_id": "uuid",
+}
+KEYCLOAK_REQUIRED_CLAIMS = ["email", "user_id"]
+
+# claim used to recognice if the user is already registered
+KEYCLOAK_USER_GET_CLAIM = "user_id"
